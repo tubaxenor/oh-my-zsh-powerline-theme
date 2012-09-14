@@ -19,6 +19,7 @@ Set Up
 
     ```
     ZSH_THEME="powerline"
+    # export TERM="xterm-256color" if you are using ubuntu
     ```
 
 Requirements
