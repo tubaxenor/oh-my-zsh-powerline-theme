@@ -1,8 +1,10 @@
 # FreeAgent puts the powerline style in zsh !
 
-local usercolor='blue'
+local usercolor='231'
+local userbgcolor='130'
 if [ $UID -eq 0 ]; then
-  usercolor='red'
+  usercolor='009'
+  userbgcolor='052'
 fi
 
 POWERLINE_COLOR_BG_GRAY=%K{240}
@@ -32,6 +34,6 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%F{082]═%f"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{190]✭%f"
 
 PROMPT="
-%K{130}%F{231} %n %k%f%F{130}%K{237}"$'\u2b80'"%k%f%B%F{231}%K{237} %~ %k%f%b%F{247}%K{237}"$'$(git_prompt_info)'" %k%f%F{237}"$'\u2b80'"%f "
+%K{$userbgcolor}%F{$usercolor} %n %k%f%F{$userbgcolor}%K{237}"$'\u2b80'"%k%f%B%F{231}%K{237} %~ %k%f%b%F{247}%K{237}"$'$(git_prompt_info)'" %k%f%F{237}"$'\u2b80'"%f "
 
 #RPROMPT=$POWERLINE_COLOR_FG_WHITE$'\u2b82'"%f$POWERLINE_COLOR_BG_WHITE $POWERLINE_COLOR_FG_GRAY%D{%H:%M:%S}  "$'\u2b82'"%f%k$POWERLINE_COLOR_BG_GRAY$POWERLINE_COLOR_FG_WHITE %D{%Y-%m-%d} %f%k"
